@@ -10,7 +10,7 @@ app.use(express.json())
 const notFound = require("./errors/notFound")
 const errorHandler = require("./errors/errorHandler")
 
-const PORT = process.env.PORT || 5002
+/*const PORT = process.env.PORT || 5002*/
 
 const moviesRouter = require("./movies/movies.router");
 
@@ -20,9 +20,9 @@ const moviesRouter = require("./movies/movies.router");
 
 //app.use("/", router);
 
-app.listen(PORT, () => {
+/*app.listen(PORT, () => {
     console.log(`Server running on ${PORT}`)
-})
+})*/
 
 app.use("/movies", moviesRouter);
 
