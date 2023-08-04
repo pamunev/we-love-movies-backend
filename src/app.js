@@ -13,6 +13,7 @@ const errorHandler = require("./errors/errorHandler")
 /*const PORT = process.env.PORT || 5002*/
 
 const moviesRouter = require("./movies/movies.router");
+const reviewsRouter = require ("./reviews/reviews.router");
 
 /*router.get('/', cors(), (req, res) => {
     res.json({ message: "Hello, is this working?" })
@@ -25,6 +26,7 @@ const moviesRouter = require("./movies/movies.router");
 })*/
 
 app.use("/movies", moviesRouter);
+app.use("/reviews", reviewsRouter);
 
 // Not found handler
 app.use(notFound);
