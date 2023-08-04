@@ -5,8 +5,15 @@
 - What stuff do I need to import?
 */
 
-const movies = require
+const moviesService = require("./movies.service");
+const asyncErrorBoundary = require("../errors/asyncErrorBoundary")
 
-function list(req, res, next) {
+async function list(req, res, next) {
+    const movies = await moviesService.list();
+    console.log(movies)
     res.json({ data: movies })
+}
+
+module.exports = {
+    list: asyncErrorBoundary(list),
 }
