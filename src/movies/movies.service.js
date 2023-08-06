@@ -35,13 +35,12 @@ function listTheatersShowingMovie(movieId) {
 }
 
 function listReviewsForMovie(movieId) {
-    return knex("reviews as r")
-      .join("movies as m", "r.movie_id", "m.movie_id")
+    return knex("movies as m")
+      .join("reviews as r", "r.movie_id", "m.movie_id")
       .join("critics as c", "r.critic_id", "c.critic_id")
-      .where({ "r.movie_id": movieId })
-      .select("r.*", "c.*")
-      .groupBy("r.review_id", "c.critic_id")
-      .then(addCritic)
+      .select("*")
+      .where({ "m.movie_id": movieId })
+      .then((reviews) => reviews.map(addCritic));
 }
 
 

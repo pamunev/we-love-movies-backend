@@ -31,7 +31,6 @@ async function list(req, res, next) {
     } else {
         movies = await moviesService.list();
     }
-    //console.log(movies)
     res.json({ data: movies })
 }
 

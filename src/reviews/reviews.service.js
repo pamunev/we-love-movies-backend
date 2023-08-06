@@ -1,10 +1,3 @@
-/*
-I need:
-- a list() to use in movies/:movieId/reviews
-- a read() for validation that a review exists
-- a destroy
-- an update
-*/
 const knex = require("../db/connection")
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary")
 const mapProperties = require("../utils/map-properties")

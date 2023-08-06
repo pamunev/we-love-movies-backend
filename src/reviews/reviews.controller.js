@@ -1,11 +1,3 @@
-/*
-I need:
-- a list() to use in movies/:movieId/reviews
-- a destroy
-- a validation for destroy and update (reviewExists)
-- an update
-*/
-
 const reviewsService = require("./reviews.service")
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary")
 
