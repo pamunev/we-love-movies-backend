@@ -1,4 +1,4 @@
-#WeLoveMovies - Back End
+# WeLoveMovies - Back End
 
 This is the back end for WeLoveMovies, a movie website allowing any user to search for their favorite movies.
 
