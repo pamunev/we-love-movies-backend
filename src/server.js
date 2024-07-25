@@ -12,3 +12,5 @@ knex.migrate
     app.listen(PORT, listener);
   })
   .catch(console.error);
+
+console.log("Environment variables:", process.env);
